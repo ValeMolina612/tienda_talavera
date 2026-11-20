@@ -80,15 +80,6 @@ El proyecto sigue el ciclo **Rojo → Verde → Refactor**:
 2. **Verde:** se implementa el código mínimo necesario para que la prueba pase.
 3. **Refactor:** se mejora el diseño conservando todas las pruebas en verde.
 
-Las 60 pruebas automatizadas están distribuidas en tres suites:
-
-| Suite | Cobertura principal |
-| --- | --- |
-| `test/dominio_test.dart` | Dinero, productos, carrito, validadores y tarjetas |
-| `test/servicios_test.dart` | Pagos, checkout, idempotencia, cuentas y seguridad |
-| `test/viewmodels_test.dart` | Catálogo, carrito, sesión y checkout |
-
-
 
 ## Rondas de desarrollo
 
@@ -105,29 +96,14 @@ Las 60 pruebas automatizadas están distribuidas en tres suites:
 11. Visor 3D y realidad aumentada.
 12. Preparación para producción.
 
-## Arquitectura
-
-```text
-lib/
-├── dominio/       Reglas del negocio y contratos
-├── datos/         Repositorios, persistencia y servicios simulados
-├── presentacion/
-│   ├── vm/        ViewModels con ChangeNotifier
-│   └── pantallas/ Interfaz de usuario
-├── dependencias.dart
-└── main.dart
-```
-
-Las dependencias apuntan hacia el dominio. Las reglas del negocio no conocen Flutter, la base de datos ni la pasarela de pago, por lo que se pueden probar rápidamente y sustituir las implementaciones externas.
 
 ##  ejecución
-
 
 cd tienda_talavera
 flutter pub get
 flutter test
 flutter run
-```
+
 
 ## Datos de prueba
 
