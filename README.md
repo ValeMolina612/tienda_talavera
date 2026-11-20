@@ -1,31 +1,5 @@
-# Tienda Talavera Dolores
 
-Aplicación móvil de comercio electrónico desarrollada con Flutter y TDD. Permite explorar artesanías de Dolores Hidalgo, consultar detalles, visualizar productos compatibles en 3D, administrar un carrito, iniciar sesión y completar una compra simulada.
 
-**Desarrollado por [ValeMolina612](https://github.com/ValeMolina612)**  
-**Repositorio:** [ValeMolina612/tienda_talavera](https://github.com/ValeMolina612/tienda_talavera)
-
-![Flutter](https://img.shields.io/badge/Flutter-3.47-02569B?logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.13-0175C2?logo=dart&logoColor=white)
-![TDD](https://img.shields.io/badge/TDD-60%20pruebas%20en%20verde-2E7D32)
-![Autor](https://img.shields.io/badge/GitHub-ValeMolina612-181717?logo=github)
-
-> Proyecto académico de Desarrollo Móvil Integral, UTNG. La pasarela de pago y el servidor de cuentas son simulados; no se procesa dinero real.
-
-## Funcionalidades
-
-- Catálogo con búsqueda, categorías y filtro de productos con realidad aumentada.
-- Detalle de producto, existencias, dimensiones y favoritos.
-- Visor 3D y opción **Ver en tu espacio** mediante `model_viewer_plus`.
-- Carrito persistente, control de existencias, cupones y envío gratis desde $800.
-- Registro, inicio de sesión, bloqueo por intentos y almacenamiento seguro de sesión.
-- Checkout con dirección, validación de tarjeta, idempotencia y revalidación de precios.
-- Historial de compras y perfil del usuario.
-- Dinero almacenado como centavos enteros para evitar errores de precisión.
-
-## Evidencias de las fases de la aplicación
-
-Las capturas se generaron directamente desde las pantallas del proyecto, con un tamaño completo de 720 × 1000 píxeles.
 
 ### Fase 1 Catálogo
 
@@ -55,7 +29,8 @@ Acceso a la cuenta mediante correo y contraseña, con opción para crear un nuev
 
 Presenta datos de la cuenta, dirección, favoritos, historial de compras y cierre de sesión.
 
-![Perfil del usuario](docs/capturas/05-perfil-cuenta.png)
+<img width="617" height="885" alt="image" src="https://github.com/user-attachments/assets/9b6a106b-fccd-4ef5-ae91-6d042ca2b0b2" />
+
 
 ### Fase 6 Dirección de envío
 
@@ -113,11 +88,7 @@ Las 60 pruebas automatizadas están distribuidas en tres suites:
 | `test/servicios_test.dart` | Pagos, checkout, idempotencia, cuentas y seguridad |
 | `test/viewmodels_test.dart` | Catálogo, carrito, sesión y checkout |
 
-```bash
-flutter test --reporter expanded
-```
 
-Resultado verificado: **60 pruebas aprobadas**.
 
 ## Rondas de desarrollo
 
@@ -149,20 +120,13 @@ lib/
 
 Las dependencias apuntan hacia el dominio. Las reglas del negocio no conocen Flutter, la base de datos ni la pasarela de pago, por lo que se pueden probar rápidamente y sustituir las implementaciones externas.
 
-## Instalación y ejecución
+##  ejecución
 
-```bash
-git clone https://github.com/ValeMolina612/tienda_talavera.git
+
 cd tienda_talavera
 flutter pub get
 flutter test
 flutter run
-```
-
-Para Android se requiere el permiso de Internet en `android/app/src/main/AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ## Datos de prueba
@@ -187,5 +151,5 @@ Para Android se requiere el permiso de Internet en `android/app/src/main/Android
 
 ## Autor
 
-**ValeMolina612**  
-GitHub: [github.com/ValeMolina612](https://github.com/ValeMolina612)
+**Valeria Molina**  
+
