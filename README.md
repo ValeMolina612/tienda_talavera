@@ -50,13 +50,11 @@ La compra aprobada genera una orden, muestra la referencia del pago y descuenta 
 
 ![Confirmación de compra](docs/capturas/08-confirmacion.png)
 
-## Evidencias del ciclo TDD en la terminal
 
-Las siguientes capturas fueron tomadas directamente en Visual Studio Code con el proyecto `tienda_talavera` abierto. En ambas se observan el código de las pruebas, la terminal integrada y la cuenta **ValeMolina612 (GitHub)**.
 
 ### Fase roja
 
-Siguiendo el manual, primero se comprueba que las pruebas fallen antes de disponer de la implementación. Para obtener esta evidencia se retiró temporalmente `lib/dominio/dinero.dart`, se ejecutó `flutter test test\dominio_test.dart --reporter expanded` y la terminal mostró **Some tests failed**. Inmediatamente después se restauró el archivo sin conservar cambios en el código.
+
 
 ![Fase roja TDD en la terminal](docs/capturas/09-fase-roja-terminal.png)
 
@@ -111,19 +109,6 @@ flutter run
 - Tarjeta rechazada: `4000 0000 0000 0002`
 - Fecha: cualquier fecha futura
 - CVV: `123`
-- Cupón de 10 %: `DOLORES10`
-- Cupón de 15 %: `TALAVERA15`
-
-## Seguridad aplicada
-
-- Contraseñas almacenadas con sal y hash en la simulación.
-- Mensajes genéricos de autenticación para evitar revelar cuentas existentes.
-- Bloqueo después de cinco intentos fallidos.
-- Tokens en almacenamiento seguro y carrito en preferencias normales.
-- Validación Luhn, marca, vigencia y CVV de la tarjeta.
-- Claves de idempotencia para impedir cobros dobles.
-- Revalidación de precios y existencias antes de cobrar.
-- Limpieza del número de tarjeta y del CVV después del pago.
 
 ## Autor
 
