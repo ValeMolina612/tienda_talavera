@@ -77,17 +77,17 @@ La compra aprobada genera una orden, muestra la referencia del pago y descuenta 
 
 ## Evidencias del ciclo TDD en la terminal
 
-Las siguientes capturas muestran ejecuciones reales del proyecto. En la parte superior aparece la cuenta de GitHub **ValeMolina612** y la rama `main` vinculada con `origin`.
+Las siguientes capturas fueron tomadas directamente en Visual Studio Code con el proyecto `tienda_talavera` abierto. En ambas se observan el código de las pruebas, la terminal integrada y la cuenta **ValeMolina612 (GitHub)**.
 
 ### Fase roja
 
-Para demostrar la fase roja se retiró temporalmente `lib/dominio/dinero.dart` en una copia de trabajo. La suite no puede compilar y las pruebas fallan porque todavía no existen `formatearPesos`, `ivaIncluido` y `porcentaje`. El archivo original del repositorio permaneció intacto.
+Siguiendo el manual, primero se comprueba que las pruebas fallen antes de disponer de la implementación. Para obtener esta evidencia se retiró temporalmente `lib/dominio/dinero.dart`, se ejecutó `flutter test test\dominio_test.dart --reporter expanded` y la terminal mostró **Some tests failed**. Inmediatamente después se restauró el archivo sin conservar cambios en el código.
 
 ![Fase roja TDD en la terminal](docs/capturas/09-fase-roja-terminal.png)
 
 ### Fase verde
 
-Después de restaurar la implementación se ejecutaron las tres suites del proyecto. El resultado fue **60 pruebas aprobadas**.
+Después de restaurar la implementación se ejecutaron `dominio_test.dart`, `servicios_test.dart` y `viewmodels_test.dart`. La terminal mostró **+60: All tests passed!**.
 
 ![Fase verde TDD con 60 pruebas aprobadas](docs/capturas/10-fase-verde-terminal.png)
 
